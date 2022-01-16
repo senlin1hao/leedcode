@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+#include <math.h>
 
 //二分法，O(nlogn)
 int lower_bound(int *nums, int left, int right, int target)
@@ -35,11 +36,16 @@ int minSubArrayLen(int target, int* nums, int numsSize)
     }
     
     int minLen = INT_MAX;
+    int iMinLen;
     int target1;
     for (int i = 1; i <= numsSize; i++)
     {
         target1 = target + sums[i - 1];
-        minLen = lower_bound(sums, i, numsSize, target1);
+        iMinLen = lower_bound(sums, i, numsSize, target1);
+        if (iMinLen != -1)
+        {
+            minLen = fmin(minLen, iMinLen - i + 1);
+        }
     }
-    
+    return minLen == INT_MAX ? 0 : minLen;
 }
