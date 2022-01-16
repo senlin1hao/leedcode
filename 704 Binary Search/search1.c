@@ -1,5 +1,4 @@
 //递归
-
 int search(int *nums, int numsSize, int target)
 {
     if (numsSize == 1)
