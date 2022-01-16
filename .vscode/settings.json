@@ -13,6 +13,5 @@
         "istream": "c",
         "limits": "c",
         "numeric": "c",
-        "minSubArrayLen2.C": "cpp"
     }
 }
