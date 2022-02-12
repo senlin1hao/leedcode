@@ -26,7 +26,6 @@ struct ListNode *detectCycle(struct ListNode *head)
             }
             return fast;
         }
-        
     }
     return NULL;
 }
