@@ -6,6 +6,9 @@
         "stdio.h": "c",
         "vector": "cpp",
         "iostream": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "cstring": "c",
+        "*.def": "c",
+        "stdbool.h": "c"
     }
 }
