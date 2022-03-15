@@ -1,1 +1,1 @@
-一个菜鸟的leedcode代码库
+一个菜鸟的leetcode代码库
