@@ -17,7 +17,9 @@ public:
         vector<vector<int>> result;
         sort(nums.begin(), nums.end());
 
-        for (int i = 0; i < nums.size(); i++)
+        int i = 0;
+
+        while (i < nums.size())
         {
             if (nums[i] > 0)
             {
@@ -27,6 +29,7 @@ public:
             // a去重
             if ((i > 0) && (nums[i] == nums[i - 1]))
             {
+                ++i;
                 continue;
             }
 
@@ -75,6 +78,8 @@ public:
                     --right;
                 }
             }
+
+            ++i;
         }
 
         return result;
