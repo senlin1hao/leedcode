@@ -62,20 +62,20 @@ public:
                 {
                     result.push_back({nums[i], nums[left], nums[right]});
 
+                    ++left;
+                    --right;
+
                     // b去重
-                    while ((left < right) && (nums[left] == nums[left + 1]))
+                    while ((left < right) && (nums[left] == nums[left - 1]))
                     {
                         ++left;
                     }
 
                     // c去重
-                    while ((left < right) && (nums[right] == nums[right - 1]))
+                    while ((left < right) && (nums[right] == nums[right + 1]))
                     {
                         --right;
                     }
-
-                    ++left;
-                    --right;
                 }
             }
 
