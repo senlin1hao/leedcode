@@ -9,6 +9,11 @@
         "chrono": "cpp",
         "cstring": "c",
         "*.def": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "array": "cpp",
+        "bitset": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp"
     }
 }
