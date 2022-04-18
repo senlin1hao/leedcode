@@ -3,6 +3,8 @@
 
 using namespace std;
 
+
+//使用1个队列
 class MyStack
 {
 private:
