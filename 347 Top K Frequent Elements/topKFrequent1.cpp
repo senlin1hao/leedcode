@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <algorithm>
 
 using namespace std;
@@ -18,7 +18,7 @@ private:
 public:
     vector<int> topKFrequent(vector<int> &nums, int k)
     {
-        map<int, int> numsMap;
+        unordered_map<int, int> numsMap;
         for (int i : nums)
         {
             ++numsMap[i];
