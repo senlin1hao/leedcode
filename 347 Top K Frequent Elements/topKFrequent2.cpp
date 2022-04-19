@@ -24,8 +24,10 @@ public:
         若 expression 参数是标识符或类成员访问，则 decltype(expression) 是 expression 命名的实体的类型。若是不存在此类实体或 expression 参数命名一组重载函数，则编译器将生成错误消息。
         若 expression 参数是对一个函数或一个重载运算符函数的调用，则 decltype(expression) 是函数的返回类型。将忽略重载运算符两边的括号。
         若 expression 参数是右值，则 decltype(expression) 是 expression类型。若是 expression参数是左值，则 decltype(expression) 是对 左值引用 类型的expression。
+
+        priority_queue构造函数需要将compare函数作为实参加入
         */
-        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&compare)> pri_queue;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&compare)> pri_queue(compare);
 
         unordered_map<int, int> numsMap;
         for (int i : nums)
@@ -35,6 +37,7 @@ public:
 
         for (pair<int, int> p : numsMap)
         {
+            //cout << p.first << " " << p.second << endl;
             if (pri_queue.size() < k)
             {
                 pri_queue.push(p);
@@ -56,16 +59,3 @@ public:
         return result;
     }
 };
-
-int main()
-{
-    vector<int> v1({1,1,1,2,2,3});
-    int k = 2;
-    Solution s;
-    vector<int> v2 = s.topKFrequent(v1, k);
-    for (int i : v2)
-    {
-        cout << i << " ";
-    }
-    return 0;
-}
