@@ -15,6 +15,10 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "deque": "cpp",
+        "random": "cpp",
+        "iosfwd": "cpp",
+        "functional": "cpp"
     }
 }
