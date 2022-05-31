@@ -33,7 +33,6 @@ private:
 
         //不抢劫parent节点
         int result2 = max(left[0], left[1]) + max(right[0], right[1]);
-
         return {result1, result2};
     }
 
