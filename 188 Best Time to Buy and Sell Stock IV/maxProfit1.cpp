@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//动态规划，时间复杂度O(k * n)，空间复杂度O(k * n)
 class Solution
 {
 public:
